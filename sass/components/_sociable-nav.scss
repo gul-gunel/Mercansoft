@@ -1,0 +1,27 @@
+.sociable-nav{
+	&__list{
+		list-style: none;
+	
+		display: flex;
+	}
+	&__link{
+		&,
+		&:link,
+		&:visited{
+			padding: .5rem;
+		}
+
+		&:hover,
+		&:active{
+			svg{
+				fill: $color-secondary;
+			}
+		}
+	}
+	&__icon{
+		width: 1rem;
+		height: 1rem;
+		fill: $color-primary;
+	}
+}
+

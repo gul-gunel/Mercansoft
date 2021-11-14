@@ -1,0 +1,19 @@
+{
+  "name": "bolum-12",
+  "version": "1.0.0",
+  "description": "mercansoft web sayfası",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "keywords": [
+    "yazılım",
+    "software",
+    "website"
+  ],
+  "author": "Gül Günel",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

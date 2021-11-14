@@ -1,0 +1,285 @@
+.sec-info{
+	height: 39rem;
+	padding: 4rem 6rem 1rem 6rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__container{
+		display: flex;
+		height: 100%;
+	}
+	&__left{
+		flex: 0 0 50%;
+		// bu yükseklik değerinin uygulanabilmesi için parent elementine yükseklik vermeliyiz.
+		height: 65%;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	&__right{
+		flex: 0 0 50%;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__img{
+		width: 90%;
+		height: 90%;
+	}
+}
+
+
+.sec-features{
+	min-height: 50rem;
+	padding: 4rem 6rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	&__top{
+		width: 70%;
+		text-align: center;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	&__bottom{
+		min-height: 32rem;
+		width: 90%;
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;		
+	}
+
+	&__feature{
+		height: 13rem;
+		width: 27%;
+		text-align: justify;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__icon{
+		width: 2.5rem;
+		height: 2.5rem;
+		fill: $color-primary;
+	}
+
+}
+
+
+.sec-workflow{
+	height: 68rem;
+	padding: 4rem 0 2rem 0;
+	background-color: #e3f5eb;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	&__top{
+		height: 6rem;
+		width: 70%;
+		text-align: center;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	&__bottom{
+		// width: 85%;
+		// dikeyde alanın %85'i bu elemente ait olacak
+		flex: 0 85%;
+
+		display: flex;
+	}
+
+	&__left{
+		flex: 0 0 48%;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+
+	&__line-box{
+		// 48 + 48 'den kalan değerin hepsini alır. Kalan boşluklalrı doldur
+		flex: 1;
+
+		// çizgi görünmüyordu yükseklik değeri olmadığından fakat flex verdik göründü nedeni ise align-items: strech ; varsayılanının olmasıdır
+		display: flex;
+		justify-content: center;
+	}
+	&__line{
+		width: 4px;
+		background-color: #e3a396;
+
+		// circle yerleştirme
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+	&__circle{
+		// inline etiketler genişlik ve yükseklik değeri almaz
+		display: block;
+		width: 1.3rem;
+		height: 1.3rem;
+		border-radius: 50%;
+		background-color: #e3a396;		
+	}
+
+	&__right{
+		flex: 0 0 48%;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__box{
+		height: 10rem;
+		width: 80%;
+	}	
+
+	&__icon{
+		width: 7rem;
+		height: 7rem;
+		border-radius: 50%;
+		border: 4px solid #e3a396;
+		box-shadow: 2px 2px 5px rgba($color-black, $alpha: 0.4);
+		// shape-outside: circle(50%); bana yaslanacak yazı %50 şekilde yuvarlansın. Bu property tek başına çalışmaz float ile çalışır. bununla birlikte yazı iconun yanına geldi
+		shape-outside: circle(50%);
+		float: left;
+		margin: 0 1rem;
+	}
+
+	&__heading{
+		letter-spacing: 1px;
+		margin-bottom: .5rem;
+	}
+}
+
+
+.sec-counter{
+	height: 40rem;
+	padding: 3rem 6rem;
+	background-image: linear-gradient(
+		to bottom, 
+		rgba(#e3a396,.5), 
+		rgba(#e3a396,.6)
+		),	
+		url("../imgs/counter-bg-2000.jpg");
+		// url yolunda style.css dosyasından img klasörüne ulaşacağız!!! home.scss'ten değil.
+	background-size: cover;
+
+	display: flex;
+	justify-content: center;
+
+	&__container{
+		width: 80%;;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__top{
+		width: 85%;
+		text-align: center;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__bottom{
+		width: 100%;
+
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+
+.sec-card{
+	height: 55rem;
+	padding: 4rem 5rem 2rem 5rem;
+	background-color: #edeeee;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	&__cards{
+		flex: 0 90%;
+		width: 100%;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.sec-idea{
+	height: 35rem;
+	background-image:
+		linear-gradient(to bottom, rgba($color-white,.6),rgba($color-white,.5)), 
+		url(../imgs/sec-idea-bg-2000.jpg);
+	background-size: cover;
+	// ** scroll kaysada resim sabit kalıyor
+	background-attachment: fixed;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&__text{
+		font-family: 'Munito',sans-serif;
+		font-weight: 200;
+		font-size: 3.5rem;
+		color: $color-white;
+		letter-spacing: 2px;
+	}
+}
+
+.sec-comment{
+	height: 40rem;
+	padding: 4rem 3rem;
+	background-color: rgba(#b4bbbd, .7);
+
+	display: flex;
+	flex-direction: column;
+
+	&__top{
+		flex: 0 20%;
+
+		display: flex;
+		justify-content: center;
+	}
+	&__bottom{
+		flex: 0 80%;
+
+		display: flex;
+		justify-content: space-around;
+	}
+}

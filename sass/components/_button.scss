@@ -1,0 +1,70 @@
+.button{
+	padding: 1.25rem 3rem;
+	text-transform: uppercase;
+	border-radius: 5rem;
+	background-color: $color-primary;
+	color: $color-white;
+	border: none;
+	font-size: .7rem;
+	letter-spacing: 1px;
+	cursor: pointer;
+	// overflow: hidden; ** son span hover olmadığında opacity değeri 0 olduğundan bu etikete gerek kalmadı
+	// outline: none;
+
+	position: relative;
+
+	span{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		transition: all .3s ease-in; 
+
+		&:last-child{
+			top: 100%;
+			transform: translate(-50%, 0);
+			opacity: 0;
+		}
+	}
+
+	&:hover,
+	&:active{
+		background-color: $color-primary;
+
+		span{
+			opacity: 0;
+			&:last-child{
+				top: 50%;
+				transform: translate(-50%, -50%);
+				opacity: 1;
+			}
+		}
+	}
+
+	&--middle{
+		font-size: .9rem;
+		padding: 1.5rem 8rem;
+	}
+	&--big{
+		font-size: .9rem;
+		padding: 2rem 8rem;
+	}
+
+	&--pink{
+		background-color: rgba(#ee4266,1);
+		&:hover{
+			background-color: rgba(#ee4266,.6);
+		}
+	}
+	&--purple{
+		background-color: rgba(#540d6e,0.8);
+		&:hover{
+			background-color: rgba(#540d6e,.6);
+		}
+	}
+}
+
+
+
+
+

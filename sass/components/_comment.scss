@@ -1,0 +1,65 @@
+.comment{
+	height: 21rem;
+	width: 20%;
+
+	position: relative;
+
+	&__content{
+		height: 100%;
+		padding: 4rem 1rem;
+		background-color: rgba($color-white, .8);
+		clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 25% 100%, 0% 75%);
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		position: relative;
+
+		&::before{
+			content: url(../imgs/left-quote.png);
+			position: absolute;
+			left: 3%;
+			top: 3%;
+			transform: scale(.7);
+			opacity: .4;
+		}
+	}
+
+	&__shadow{
+		height: 100%;
+		filter: drop-shadow(-1px 6px 3px rgba(#323200, .5));
+	}
+l
+	&__img{
+		width: 5rem;
+		height: 5rem;
+		border-radius: 50%;
+		box-shadow: -4px 3px 4px 3px rgba($color-black, .3);
+
+		position: absolute;
+		right: 5%;
+		top: -7%;
+		z-index: 1;
+	}
+
+	&__text{
+		font-size: .8rem;
+		font-weight: 600;
+		letter-spacing: 1px;
+		color: #504f4f;
+		text-align: justify;
+	}
+
+	&__author{
+		font-family: 'Nunito',sans-serif;
+		font-weight: 200;
+		font-size: .8rem;
+		letter-spacing: 1px;
+		text-align: right;
+	}
+	
+	&:nth-child(2), &:nth-child(4){
+		align-self: flex-end;
+	}
+}

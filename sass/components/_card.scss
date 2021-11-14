@@ -1,0 +1,127 @@
+.card{
+	height: 80%;
+	width: 30%;
+	background-color: $color-white;
+	border-radius: 4px;
+	box-shadow: 0 2rem 2.5rem rgba($color-black, .2);
+
+	display: flex;
+	flex-direction: column;
+
+	&__top{
+		flex: 0 45%;
+		background-image: linear-gradient(to right bottom, rgba($color-primary, .9), rgba(#a3ebb1, .7));
+		// belirli alanda belirli kısmı göstermek, carttaki eğikliği vermek için
+		clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100% );
+		border-radius: 4px 4px 0 0;
+		padding: 3rem 0;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+	&__bottom{
+		flex: 1;
+		border-radius: 0 0 4px 4px;
+		
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+	&__img{
+		width: 4rem;
+		height: 4rem;
+		fill: $color-white;
+	}
+	&__texts{
+		color: $color-white;
+		line-height: 1;
+		
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+	&__title{
+		font-size: 1.2rem;
+		letter-spacing: 2px;
+	}
+	&__price{
+		font-family: 'Nunito', sans-serif;
+		font-weight: 800;
+		font-size: 2.7rem;
+
+		sup{
+			font-size: .8rem;
+		}
+	}
+	&__text{
+		font-size: 1rem;
+	}
+
+	&__list{
+		list-style: none;
+		width: 80%;
+	}
+	&__item{
+		color: #9e9e9e;
+		padding-top: 1rem;
+		border-bottom: 1px solid #ddd;
+
+		display: flex;
+		justify-content: space-between;
+
+		span:last-child{
+			font-weight: bold;
+			// float: right; || hoca flex ile yaptı.
+		}
+
+		&:last-child{
+			border: none;
+		}
+	}
+
+	// ikinci card elemanı demek
+	&:nth-child(2){
+		// diğer kartlara göre biraz daha büyütme
+		transform: scale(1.1);
+		position: relative;
+
+		&::before{
+			content: url("../imgs/badge.png");
+			position: absolute;
+			right: 10%;
+			top: 33%;
+			z-index: 1;
+			transform: scale(1.3);
+		}
+		&::after{
+			// contante eklediğimiz yazıyı alt satıra geçirme
+			content: "En \a popüler";
+			white-space: pre;
+
+			text-align: center;
+
+			position: absolute;
+			right: 11%;
+			top: 35%;
+			z-index: 2;
+
+			color: $color-white;
+			font-weight: 300;
+			font-size: .9rem;
+			line-height: 1.25;
+			letter-spacing: 1.5px;
+
+		}
+	}
+
+	&--pink{
+		background-image: linear-gradient(to right bottom,rgba(#ee4266,1),rgba(#e8889c,.6));
+	}
+	&--purple{
+		background-image: linear-gradient(to right bottom,rgba(#540d6e,.8),rgba(#532d61,.6));
+	}
+}

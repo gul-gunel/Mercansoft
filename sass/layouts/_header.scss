@@ -1,0 +1,16 @@
+/* HEADER */
+.header{
+	min-height: 8rem;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	position: relative;
+
+	&__sociable-nav{
+		position: absolute;
+		right: 10%;
+		top: 2%;
+	}
+}
