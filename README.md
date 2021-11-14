@@ -3,4 +3,4 @@
 ## Başlık 2
 Açıklamalar yazılabilir.
 
-[link] (link yolu)
+[link açıklama] (link yolu)
