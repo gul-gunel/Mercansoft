@@ -1,8 +1,3 @@
-# Heading 1 
+# MercanSoft
 
-## Başlık 2
-Açıklamalar yazılabilir.
-
-[link açıklama] (link yolu)
-
-### Başlık3 eklendi - deneme
+ You can check the app here [Click Me](https://mercansoft.vercel.app/)
